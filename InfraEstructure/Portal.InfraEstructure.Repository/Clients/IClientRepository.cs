@@ -5,5 +5,6 @@ namespace Portal.InfraEstructure.Repository.Clients
 {
     public interface IClientRepository: IRepository<Client> 
     {
+        Client FindClintById(string ClientId);
     }
 }

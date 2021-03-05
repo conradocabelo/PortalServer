@@ -10,6 +10,6 @@ namespace Portal.InfraEstructure.Entity
     public static class IOCLayer
     {
         public static IServiceCollection InfraEstructureEntityIOC(this IServiceCollection services) => 
-            services.AddSingleton<IPortalContext, PortalContext>();
+            services.AddScoped<IPortalContext, PortalContext>();
     }
 }

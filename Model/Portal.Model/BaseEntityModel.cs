@@ -24,6 +24,6 @@ namespace Portal.Model
             left.Id.CompareTo(rigth.Id) == 0;
 
         public static bool operator !=(BaseEntityModel left, BaseEntityModel rigth) =>
-            left.Id.CompareTo(rigth.Id) < 0;
+            left?.Id.CompareTo(rigth.Id) < 0;
     }
 }

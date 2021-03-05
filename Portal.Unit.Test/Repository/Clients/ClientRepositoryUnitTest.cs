@@ -19,7 +19,6 @@ namespace Portal.Unit.Test.Repository.Clients
         {
             Client client = new Client
             {
-                ClientId = "client.test",
                 AcceptScope = new List<ClientScope> { new ClientScope() { ScopeLabel = "teste.scope" } },
                 AcessTokenLifetime = 250,
                 ClientName = "client teste",

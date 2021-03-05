@@ -1,18 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Portal.InfraEstructure.Entity;
 using Portal.InfraEstructure.Entity.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Portal.InfraEstructure.Repository;
+using Portal.Server.Adm.Api.ViewModel.Mapper;
 
 namespace Portal.Server.Adm.Api
 {
@@ -37,9 +33,14 @@ namespace Portal.Server.Adm.Api
 
             services.AddDbContext<PortalContext>(
                 options => options.UseNpgsql(
-                    Configuration.GetConnectionString("LocalDb")
+                    Configuration.GetConnectionString("InitDb")
                 )
             );
+
+            services.InfraEstructureEntityIOC();
+            services.InfraEstructureRepositoryIOC();
+
+            services.AddAutoMapper(typeof(ClientsProfile));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
