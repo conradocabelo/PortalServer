@@ -22,7 +22,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\InfraEstructure\Portal.InfraEstructure.Entity\Portal.InfraEstructure.Entity.csproj" />
     <ProjectReference Include="..\..\InfraEstructure\Portal.InfraEstructure.Repository\Portal.InfraEstructure.Repository.csproj" />
-    <ProjectReference Include="..\..\Migrations\Portal.Migrations.Postgres\Portal.Migrations.Postgres.csproj" />
     <ProjectReference Include="..\..\Model\Portal.Model\Portal.Model.csproj" />
   </ItemGroup>
 

@@ -6,7 +6,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Portal.InfraEstructure.Entity.Context
 {
-    public class PortalContext : DbContext, IPortalAdminContext
+    public class PortalContext : DbContext, IPortalContext
     {
         public PortalContext([NotNullAttribute] DbContextOptions options) : base(options)
         {

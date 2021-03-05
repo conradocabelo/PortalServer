@@ -5,7 +5,7 @@ using Portal.Model.Clients;
 
 namespace Portal.InfraEstructure.Entity.Context.Interfaces
 {
-    public interface IPortalAdminContext: IDbContext
+    public interface IPortalContext: IDbContext
     {
         public DbSet<Client> Clients { get; set; }
         public DbSet<ClientScope> ClientScopes { get; set; }

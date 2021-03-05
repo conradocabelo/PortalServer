@@ -13,8 +13,10 @@ namespace Portal.InfraEstructure.Entity.Context.Interfaces
         EntityEntry<TEntity> Add<TEntity>([NotNullAttribute] TEntity entity) where TEntity : class;
         EntityEntry<TEntity> Attach<TEntity>([NotNullAttribute] TEntity entity) where TEntity : class;
         EntityEntry<TEntity> Entry<TEntity>([NotNullAttribute] TEntity entity) where TEntity : class;
-        int SaveChanges();
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
         EntityEntry<TEntity> Update<TEntity>([NotNullAttribute] TEntity entity) where TEntity : class;
+        EntityEntry<TEntity> Remove<TEntity>([NotNullAttribute] TEntity entity) where TEntity : class;
+
+        int SaveChanges();
     }
 }
