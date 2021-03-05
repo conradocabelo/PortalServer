@@ -8,6 +8,7 @@ namespace Portal.InfraEstructure.Entity.Configuration
         public virtual void Configure(EntityTypeBuilder<TEntity> builder)
         {
             builder.HasKey(t => t.Id);
+            builder.Property(t => t.Id).ValueGeneratedOnAdd();
 
             builder.Property(t => t.CreatedAt)
                    .IsRequired();
